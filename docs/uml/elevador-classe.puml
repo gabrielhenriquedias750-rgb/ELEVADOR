@@ -1,0 +1,24 @@
+@startuml
+class Elevador {
+  - andarMinimo: int
+  - andarMaximo: int
+  - andarAtual: int
+  - portaAberta: boolean
+  + Elevador(andarMinimo: int, andarMaximo: int)
+  + subir(): void
+  + descer(): void
+  + abrirPorta(): void
+  + fecharPorta(): void
+  + isPortaAberta(): boolean
+  + getAndarAtual(): int
+  + getStatusPorta(): String
+  + getAndarMinimo(): int
+  + getAndarMaximo(): int
+}
+
+class Main {
+  + main(args: String[]): void
+}
+
+Main ..> Elevador : cria e utiliza
+@enduml
